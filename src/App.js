@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 
 import SinglePagePDFViewer from "./components/single-page";
@@ -8,12 +8,7 @@ import somefile from "./images/somefile.pdf";
 function App() {
   const { register, handleSubmit } = useForm();
 
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
+ 
 
   const onSubmit = async (data) => {
     const formData = new FormData();
